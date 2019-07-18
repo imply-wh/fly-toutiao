@@ -1,5 +1,5 @@
 {
-  "name": "fly-tt",
+  "name": "fly-toutioa",
   "version": "0.0.1",
   "main": "node-index.js",
   "browser": "index.js",
@@ -7,7 +7,7 @@
   "author": {
     "name": "imply-wh",
     "email": "649442791@qq.com",
-    "url": "https://github.com/imply-wh/fly-tt.git"
+    "url": "https://github.com/imply-wh/fly-toutioa.git"
   },
   "license": "MIT",
   "description": "Lightweigh Promise based HTTP client for the browser and node.js",
@@ -19,9 +19,9 @@
     "type": "git",
     "url": "https://github.com/imply-wh"
   },
-  "homepage": "https://github.com/imply-wh/fly-tt",
+  "homepage": "https://github.com/imply-wh/fly-toutioa",
   "bugs": {
-    "url": "https://github.com/imply-wh/fly-tt/issues"
+    "url": "https://github.com/imply-wh/fly-toutioa/issues"
   },
   "scripts": {
     "dev": "node build.js dev",
