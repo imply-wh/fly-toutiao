@@ -7,7 +7,7 @@
   "author": {
     "name": "imply-wh",
     "email": "649442791@qq.com",
-    "url": "https://github.com/imply-wh/fly-toutioa.git"
+    "url": "https://github.com/imply-wh/fly-toutiao.git"
   },
   "license": "MIT",
   "description": "Lightweigh Promise based HTTP client for the browser and node.js",
@@ -19,9 +19,9 @@
     "type": "git",
     "url": "https://github.com/imply-wh"
   },
-  "homepage": "https://github.com/imply-wh/fly-toutioa",
+  "homepage": "https://github.com/imply-wh/fly-toutiao",
   "bugs": {
-    "url": "https://github.com/imply-wh/fly-toutioa/issues"
+    "url": "https://github.com/imply-wh/fly-toutiao/issues"
   },
   "scripts": {
     "dev": "node build.js dev",
