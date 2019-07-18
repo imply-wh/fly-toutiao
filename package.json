@@ -1,5 +1,5 @@
 {
-  "name": "fly-toutioa",
+  "name": "fly-toutiao",
   "version": "0.0.1",
   "main": "node-index.js",
   "browser": "index.js",
