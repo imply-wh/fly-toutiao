@@ -26,7 +26,8 @@ var npmExtra = {
     "weex": "./src/weex.js",
     "hap": "./src/hap.js",
     "ap": "./src/ap.js",
-    "tt": "./src/tt.js"
+    "tt": "./src/tt.js",
+    "bd": "./src/bd.js"
 }
 
 

@@ -73,7 +73,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 14);
+/******/ 	return __webpack_require__(__webpack_require__.s = 13);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -742,59 +742,59 @@ module.exports = Fly;
 /***/ }),
 /* 3 */,
 /* 4 */,
-/* 5 */,
-/* 6 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
-//hap adapter
-module.exports = function (fetch) {
-    return function (request, responseCallback) {
-        request.data = request.body;
-        request.header = request.headers;
-        request.complete = function (ret) {
-            if ((typeof ret === "undefined" ? "undefined" : _typeof(ret)) !== "object") {
-                ret = {
-                    code: 0,
-                    msg: ret
-                };
-            }
+//百度小程序适配器
+module.exports = function (request, responseCallback) {
+    var con = {
+        method: request.method,
+        url: request.url,
+        dataType: request.dataType || undefined,
+        header: request.headers,
+        data: request.body || {},
+        responseType: request.responseType || 'text',
+        success: function success(res) {
             responseCallback({
-                statusCode: ret.code || 0,
-                responseText: ret.data,
-                headers: ret.headers,
-                statusMessage: ret.msg
+                statusCode: res.statusCode,
+                responseText: res.data,
+                headers: res.header
             });
-        };
-        fetch.fetch(request);
+        },
+        fail: function fail(res) {
+            responseCallback({
+                statusCode: res.statusCode || 0,
+                statusMessage: res.errMsg
+            });
+        }
     };
+    swan.request(con);
 };
 
 /***/ }),
+/* 6 */,
 /* 7 */,
 /* 8 */,
 /* 9 */,
 /* 10 */,
 /* 11 */,
 /* 12 */,
-/* 13 */,
-/* 14 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-//quick app entry
-var Fly = __webpack_require__(2);
+//百度小程序入口
+var _Fly = __webpack_require__(2);
 var EngineWrapper = __webpack_require__(1);
-var adapter = __webpack_require__(6);
-module.exports = function (fetch) {
-    var hapEngine = EngineWrapper(adapter(fetch));
-    return new Fly(hapEngine);
+var adapter = __webpack_require__(5);
+var bdEngine = EngineWrapper(adapter);
+module.exports = function (engine) {
+    return new _Fly(engine || bdEngine);
 };
 
 /***/ })

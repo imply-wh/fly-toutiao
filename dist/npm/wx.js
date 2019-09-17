@@ -73,7 +73,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 15);
+/******/ 	return __webpack_require__(__webpack_require__.s = 17);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -358,7 +358,7 @@ module.exports = EngineWrapper;
 
 /***/ }),
 
-/***/ 15:
+/***/ 17:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -367,7 +367,7 @@ module.exports = EngineWrapper;
 //微信小程序入口
 var _Fly = __webpack_require__(2);
 var EngineWrapper = __webpack_require__(1);
-var adapter = __webpack_require__(8);
+var adapter = __webpack_require__(9);
 var wxEngine = EngineWrapper(adapter);
 module.exports = function (engine) {
     return new _Fly(engine || wxEngine);
@@ -761,7 +761,7 @@ module.exports = Fly;
 
 /***/ }),
 
-/***/ 8:
+/***/ 9:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
